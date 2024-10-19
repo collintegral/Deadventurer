@@ -37,6 +37,7 @@ a {
     display: none;
 }
 
+/*These two classes allow for a fieldset appearance using sections*/
 .section-field {
     border: 2px groove threedface;
     padding: 1em;
