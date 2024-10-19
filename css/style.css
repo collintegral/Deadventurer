@@ -124,3 +124,19 @@ a {
 @media screen and (min-width: 500px) {
 
 }
+
+/*Adventurer List*/
+.section-field {
+    border: 2px groove threedface;
+    padding: 1em;
+    margin: .5em;
+}
+
+.section-label {
+    float: left;
+    margin: -1.7em 0 0;
+    padding: 0 .5em;
+    background: var(--color-primary);
+    font-size: 1em;
+    font-weight: normal;
+}
