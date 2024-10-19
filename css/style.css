@@ -37,6 +37,21 @@ a {
     display: none;
 }
 
+.section-field {
+    border: 2px groove threedface;
+    padding: 1em;
+    margin-top: .75em;
+}
+
+.section-label {
+    float: left;
+    margin: -1.7em 0 0;
+    padding: 0 .5em;
+    background: var(--color-primary);
+    font-size: 1em;
+    font-weight: normal;
+}
+
 /*Header*/
 #header {
     width: 100%;
@@ -126,17 +141,45 @@ a {
 }
 
 /*Adventurer List*/
-.section-field {
-    border: 2px groove threedface;
-    padding: 1em;
-    margin: .5em;
+.adventurers-list {
+    list-style: none;
 }
 
-.section-label {
-    float: left;
-    margin: -1.7em 0 0;
-    padding: 0 .5em;
-    background: var(--color-primary);
-    font-size: 1em;
-    font-weight: normal;
+.adventurer-card {
+    border: 2px groove;
+    padding: .51em;
+    margin: .5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;        
+}
+
+.adventurer-name {
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.adventurer-background {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.adventurer-loot {
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+}
+
+.adventurer-death {
+    grid-column: 1 / 2;
+    grid-row: 4 / 6
+}
+
+.adventurer-buttons {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.loot-list {
+    list-style: none;
+    padding: 0;
 }
