@@ -1,0 +1,34 @@
+{
+    "deadventurers": [
+        {
+            "name": "sample"
+            , "id": 0
+            , "history": {
+                "class": {"name": "test", "desc": "sample"}
+                , "subclass": {"name": "sample", "desc": "test"}
+                , "race": {"name": "test", "desc": "sample"}
+                , "background": {"name": "sample", "desc": "test"}
+            }
+            , "loot": [
+                {"name": "sample", "rarity": 0}
+                , {"name" : "test", "rarity": 4}
+            ]
+            , "notes": ""
+        }
+        , {
+            "name": "sample"
+            , "id": 1
+            , "history": {
+                "class": {"name": "test", "desc": "sample"}
+                , "subclass": {"name": "sample", "desc": "test"}
+                , "race": {"name": "test", "desc": "sample"}
+                , "background": {"name": "sample", "desc": "test"}
+            }
+            , "loot": [
+                {"name": "sample", "rarity": 0}
+                , {"name" : "test", "rarity": 4}
+            ]
+            , "notes": ""
+        }
+    ]
+}

@@ -1,3 +1,11 @@
+export function setLocalStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+export function getLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+
 export async function loadPartial(path, element) {
     let elementTemplate = await fetch(path);
   if (!elementTemplate.ok) {
@@ -30,3 +38,13 @@ export function menuClick() {
     closeIcon.classList.toggle('hide');
 }
 */
+
+export class Deadventurer {
+  constructor(charId, charName, charHistory, charLoot) {
+    this.id = charId;
+    this.name = charName;
+    this.history = charHistory
+    this.loot = charLoot;
+    this.notes = "";
+  }
+}
