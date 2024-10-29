@@ -13,7 +13,7 @@
         <div class="title">
             <h1>Deadventurer Generator</h1>
         </div>
-        <form method="get" class="generate-form">
+        <form method="get" class="generate-form hide" id="generate-form">
             <fieldset>
                 <legend>Name</legend>
                 <input type="text" name="name" placeholder="Random">
@@ -35,14 +35,15 @@
             </fieldset>
             <fieldset>
                 <legend>Loot</legend>
-                <label>Amount of Loot<input type="number" name="loot-count" placeholder="Random" min="0" max="12"></label>
-                <label>Loot Rarity Distribution<input type="range" name="loot-quality" min="0" max="70"></label>
+                <label>Amount of Loot<input type="number" name="loot_count" placeholder="Random" min="0" max="12"></label>
+                <label>Loot Rarity Distribution<input type="range" name="loot_quality" min="0" max="50"></label>
             </fieldset>
-            <button>Generate</button>
+            <button type="submit">Generate</button>
         </form>
     </main>
 
     <footer  id="footer"></footer>
     <script src="./js/loadPage.js" type="module"></script>
+    <script src="./js/generator.js" type="module"></script>
 </body>
 </html>

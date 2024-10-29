@@ -13,6 +13,7 @@
                 {"name": "sample", "rarity": 0}
                 , {"name" : "test", "rarity": 4}
             ]
+            , "killer": {"name": "test", "cr": 10}
             , "notes": ""
         }
         , {

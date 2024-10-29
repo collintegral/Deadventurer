@@ -40,11 +40,12 @@ export function menuClick() {
 */
 
 export class Deadventurer {
-  constructor(charId, charName, charHistory, charLoot) {
-    this.id = charId;
-    this.name = charName;
-    this.history = charHistory
-    this.loot = charLoot;
+  constructor(id, name, history, killer, loot) {
+    this.id = id;
+    this.name = name;
+    this.history = history;
+    this.loot = loot;
+    this.killer = killer;
     this.notes = "";
   }
 }
