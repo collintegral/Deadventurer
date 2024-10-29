@@ -163,8 +163,15 @@ export default class apiWork {
         const charHistory = {charClass, charSubclass, charRace, charBackground};   
         const charKiller = {"name": monster.name, "cr": monster.cr};
 
+        let lootCount = 0;
+        if (isNaN(charObject.loot_count)) {
+            lootCount = Math.floor(Math.random() * 7);
+        }
+        else {
+            lootCount = charObject.loot_count
+        }
 
-        for (let x = 0; x < charObject.loot_count; x++) {
+        for (let x = 0; x < lootCount; x++) {
             let rarity = Math.floor((Math.random() * (parseInt(charObject.loot_quality) + averageQuality)) / 10);
             if (rarity > 4) {rarity = 4;}
 
