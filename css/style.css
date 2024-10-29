@@ -184,3 +184,26 @@ a {
     list-style: none;
     padding: 0;
 }
+
+.adventurer-buttons {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-content: center;
+}
+
+.adventurer-buttons * {
+    background-color: var(--color-tertiary);
+    font: var(--font-title);
+    color: white;
+    border: none;
+    padding: 5%;
+    margin: 0 10%;
+}
+
+.adventurer-details {
+    grid-column: 1 / 2;
+}
+
+.adventurer-delete {
+    grid-column: 2 / 3;
+}

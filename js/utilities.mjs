@@ -49,3 +49,9 @@ export class Deadventurer {
     this.notes = "";
   }
 }
+
+export function deleteAdventurer(charId) {
+  const deadventurers = getLocalStorage('deadventurers');
+  const newDeadList = deadventurers.filter(deadventurer => {return !(deadventurer.id == charId)});
+  setLocalStorage("deadventurers", newDeadList);
+}

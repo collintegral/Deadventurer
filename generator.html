@@ -13,6 +13,7 @@
         <div class="title">
             <h1>Deadventurer Generator</h1>
         </div>
+        <h2 class="loadForm">Loading Information...</h2>
         <form method="get" class="generate-form hide" id="generate-form">
             <fieldset>
                 <legend>Name</legend>
@@ -20,23 +21,23 @@
             </fieldset>
             <fieldset>
                 <legend>Background</legend>
-                <label>Class<select name="class" id="class-list">
+                <label>Class <select name="class" id="class-list">
                     <option value="" selected>Random</option>
-                </select></label>
-                <label>Race<select name="race" id="race-list">
+                </select></label><br>
+                <label>Race <select name="race" id="race-list">
                     <option value="" selected>Random</option>
                 </select></label>
             </fieldset>
             <fieldset>
                 <legend>Cause of Death</legend>
-                <label>Monster CR<select name="cr" id="cr-list">
+                <label>Monster CR <select name="cr" id="cr-list">
                     <option value="" selected>Random</option>
                 </select></label>
             </fieldset>
             <fieldset>
                 <legend>Loot</legend>
-                <label>Amount of Loot<input type="number" name="loot_count" placeholder="Random" min="0" max="12"></label>
-                <label>Loot Rarity Distribution<input type="range" name="loot_quality" min="0" max="50"></label>
+                <label>Amount of Loot <input type="number" name="loot_count" placeholder="Random" min="0" max="6"></label><br>
+                <label>Loot Rarity Distribution <input type="range" name="loot_quality" min="0" max="50"></label>
             </fieldset>
             <button type="submit">Generate</button>
         </form>

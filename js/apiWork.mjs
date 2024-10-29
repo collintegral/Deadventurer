@@ -94,6 +94,9 @@ export default class apiWork {
             }
         });
         this.populateForm(classList, raceList, crList);
+
+        const loadForm = document.querySelector('.loadForm');
+        loadForm.classList.toggle('hide');
         createForm.classList.toggle('hide');
     }
 
@@ -108,7 +111,7 @@ export default class apiWork {
 
         let charId = 0;
         if (deadventurerList.length > 0) {
-            charId = deadventurerList.at(-1).id + 1
+            charId = await deadventurerList.at(-1).id + 1
         }
 
         let charLoot = [];
@@ -126,7 +129,7 @@ export default class apiWork {
             randomClass = this.classes[Math.floor(Math.random() * this.classes.length)];
         }
         else {
-            randomClass = this.classes[charObject.class];
+            randomClass = this.classes.filter(entry => {return entry.name == charObject.class})[0];
         }
         const randomSubclass = randomClass.archetypes[Math.floor(Math.random() * randomClass.archetypes.length)];
         const charClass = {"name": randomClass.name, "desc": randomClass.desc};
@@ -150,7 +153,7 @@ export default class apiWork {
             randomRace = this.mainRaces[Math.floor(Math.random() * this.mainRaces.length)];
         }
         else {
-            randomRace = this.mainRaces[charObject.race];
+            randomRace = this.mainRaces.filter(entry => {return entry.name == charObject.race})[0];
         }
         const charRace = {"name": randomRace.name, "desc": randomRace.desc};
 
@@ -171,9 +174,10 @@ export default class apiWork {
         }
         
         const newDead = new Deadventurer(charId, charName, charHistory, charKiller, charLoot);
-        console.log(newDead);
         deadventurerList.push(newDead);
        
         setLocalStorage("deadventurers", deadventurerList);
+
+        return charId;
     }
 }
