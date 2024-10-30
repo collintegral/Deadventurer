@@ -178,7 +178,7 @@ export default class apiWork {
             let itemRarityList = [];
             while (itemRarityList.length == 0) {
                 itemRarityList = this.items.filter((item) => item.rarity == itemRarity[rarity]);
-                rarity = rarity - 1;
+                if (itemRarityList.length == 0) {rarity = rarity - 1;}
             }
             const item = itemRarityList[Math.floor(Math.random() * itemRarityList.length)];
             charLoot.push({"name": item.name, "rarity": rarity});
