@@ -178,10 +178,12 @@ export default class apiWork {
             let itemRarityList = [];
             while (itemRarityList.length == 0) {
                 itemRarityList = this.items.filter((item) => item.rarity == itemRarity[rarity]);
-                if (itemRarityList.length == 0) {rarity = rarity - 1;}
+                if (itemRarityList.length == 0 && rarity >= 0) {rarity = rarity - 1;}
+                if (rarity < 0) {rarity = 4};
             }
+
             const item = itemRarityList[Math.floor(Math.random() * itemRarityList.length)];
-            charLoot.push({"name": item.name, "rarity": rarity});
+            charLoot.push({"name": item.name, "rarity": item.rarity});
         }
         
         const newDead = new Deadventurer(charId, charName, charHistory, charKiller, charLoot);
