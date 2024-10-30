@@ -164,8 +164,9 @@ export default class apiWork {
         const charKiller = {"name": monster.name, "cr": monster.cr};
 
         let lootCount = 0;
-        if (isNaN(charObject.loot_count)) {
-            lootCount = Math.floor(Math.random() * 7);
+        if (typeof(charObject.loot_count) != 'number') {
+            lootCount = Math.ceil(Math.random() * 6);
+            console.log(lootCount);
         }
         else {
             lootCount = charObject.loot_count
