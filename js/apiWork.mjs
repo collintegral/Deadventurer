@@ -165,18 +165,21 @@ export default class apiWork {
 
         let lootCount = 0;
         if (typeof(charObject.loot_count) != 'number') {
-            lootCount = Math.ceil(Math.random() * 6);
-            console.log(lootCount);
+            lootCount = Math.ceil(Math.random() * 5);
         }
         else {
             lootCount = charObject.loot_count
         }
 
-        for (let x = 0; x < lootCount; x++) {
+        for (let x = 0; x <= lootCount; x++) {
             let rarity = Math.floor((Math.random() * (parseInt(charObject.loot_quality) + averageQuality)) / 10);
             if (rarity > 4) {rarity = 4;}
 
-            const itemRarityList = this.items.filter((item) => item.rarity == itemRarity[rarity]);
+            let itemRarityList = [];
+            while (itemRarityList.length == 0) {
+                itemRarityList = this.items.filter((item) => item.rarity == itemRarity[rarity]);
+                rarity = rarity - 1;
+            }
             const item = itemRarityList[Math.floor(Math.random() * itemRarityList.length)];
             charLoot.push({"name": item.name, "rarity": rarity});
         }
